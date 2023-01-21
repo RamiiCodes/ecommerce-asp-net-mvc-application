@@ -74,7 +74,7 @@ namespace eTickets
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Movies}/{action=Index}/{id?}");
+                    pattern: "{controller=HOME}/{action=Index}/{id?}");
             });
 
             //Seed database
