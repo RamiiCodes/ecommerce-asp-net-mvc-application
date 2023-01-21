@@ -1,4 +1,5 @@
 ﻿using eTickets.Data;
+using eTickets.Data.Services;
 using eTickets.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -41,6 +42,9 @@ namespace eTickets
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             });
+
+            //Service Configuration
+            services.AddScoped<IActorsService, ActorsService>();
 
             services.AddControllersWithViews();
         }
